@@ -74,12 +74,10 @@ def test_area_of_circle_negative_radius():
     with pytest.raises(ValueError, match="Radius cannot be negative"):
         area_of_circle(-5)
 
-
 def test_get_nth_fibonacci_negative():
     """Test with a negative n should raise ValueError."""
-    with pytest.raises(ValueError, match="Fibonacci not defined for negative numbers"):
+    with pytest.raises(ValueError, match="n cannot be negative"):
         get_nth_fibonacci(-1)
-
 
 def test_get_nth_fibonacci_large():
     """Test with a larger n to ensure loop branch is covered."""
